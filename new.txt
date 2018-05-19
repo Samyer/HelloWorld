@@ -1,1 +1,2 @@
 test
+https://conda.anaconda.org/pytorch/linux-64/pytorch-cpu-0.4.0-py36_cpu_1.tar.bz2
