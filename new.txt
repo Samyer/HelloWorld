@@ -1,9 +1,0 @@
-test
-https://conda.anaconda.org/pytorch/linux-64/pytorch-cpu-0.4.0-py36_cpu_1.tar.bz2
-
-pip3
-pip3 install http://download.pytorch.org/whl/cpu/torch-0.4.0-cp36-cp36m-linux_x86_64.whl 
-pip3 install torchvision
-
-conda
-conda install pytorch-cpu torchvision-cpu -c pytorch

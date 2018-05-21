@@ -1,0 +1,56 @@
+test
+https://conda.anaconda.org/pytorch/linux-64/pytorch-cpu-0.4.0-py36_cpu_1.tar.bz2
+
+pip3
+pip3 install http://download.pytorch.org/whl/cpu/torch-0.4.0-cp36-cp36m-linux_x86_64.whl 
+pip3 install torchvision
+
+conda
+conda install pytorch-cpu torchvision-cpu -c pytorch
+
+安装pytorch的具体步骤：
+安装pytorch要安装两个模块：torch和torchvision。torch是主模块，用来搭建神经网络。torchvision是辅模块，里面有搭建好的网络可以直接用。
+1.安装pip3，ubuntu自带python3.5和2.7,所以没装python了
+
+sudo apt-get install python3-pip
+
+2.install numpy, scipy
+
+pip3 install numpy
+
+pip3 install --upgrade pip  //此步骤先不要执行更新避免下面的安装出现错误
+pip3 install scipy
+
+3.下载Anaconda3-5.1.0-Linux-x86_64.sh再安装  //先到Anaconda官网下载该文件
+ bash Anaconda3-5.1.0-Linux-x86_64.sh
+ 
+4.设置环境变量(a320是系统用户名)
+gedit ~/.bashrc    
+
+加入下面这行：
+
+export PATH="/home/a320/anaconda3/bin:$PATH"
+
+source ~/.bashrc
+
+5.安装依赖库
+
+conda install numpy mkl setuptools cmake gcc cffi 
+
+conda install -c soumith magma-cuda80（我用的是cuda8.0）//没有GPU Cuda加速的不用这一步
+6.使用pytorch.org官方命令安装pytorch
+由于使用conda安装命令安装pytorch出现了importerror路径错误，因此选择pip安装命令安装
+pip install http://download.pytorch.org/whl/cpu/torch-0.4.0-cp36-cp36m-linux_x86_64.whl 
+pip install torchvision
+注意：pip必须为官方最新版本，可以执行如下命令更新
+pip3 install --upgrade pip
+
+7.检测有没有装好pytorch
+
+在终端输入python
+
+import torch
+
+import torchvision
+
+没有错误就安装好了pytorch。
