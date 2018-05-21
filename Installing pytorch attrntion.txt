@@ -54,3 +54,7 @@ import torch
 import torchvision
 
 没有错误就安装好了pytorch。
+
+8.查看pytorch版本
+import torch
+print(torch.__version__)
